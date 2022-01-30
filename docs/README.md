@@ -11,15 +11,11 @@ actionLink: /exploration/
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
 [![GitHub Issues](https://img.shields.io/github/issues/dragondiver/anagram.svg)](https://github.com/dragondiver/anagram/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/dragondiver/anagram.svg)](https://github.com/dragondiver/anagram/pulls)
-[![License](https://img.shields.io/badge/license-Apache%202-blue.svg)]
+[![License](https://img.shields.io/badge/license-Apache%202-blue.svg)]()
 
 </div>
 
 ---
-
-<p align="center"> Few lines describing your project.
-    <br> 
-</p>
 
 ## 📝 Table of Contents
 
@@ -35,7 +31,8 @@ actionLink: /exploration/
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+Two words are defined as anagrams if they do share the same letters, but are in a different order (i.e. the English words race and care are anagrams).<br>
+Given an input file which contains one word per line, as an output construct a list of all anagrams from that input file. Print those words to the console, where all words that are an anagram should each other should be on the same line.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 

@@ -1,5 +1,6 @@
-package com.fhuber.schwarz;
+package com.fhuber.schwarz.hashkey;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeAll;
@@ -11,11 +12,18 @@ public class HashUtilityTest {
 
     @BeforeAll
     static void setup() {
-        hashu = new HashUtility(30);
+        hashu = new HashUtility();
     }
 
     @Test
     void checkPrime() {
         assertTrue(hashu.isPrime(3));
+    }
+
+    @Test
+    void checkUmlaute() {
+        String hash = hashu.hashCode("aalähnlich");
+        System.out.println(hash);
+        assertNotNull(hash);
     }
 }

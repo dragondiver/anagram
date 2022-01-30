@@ -10,6 +10,7 @@ module.exports = {
       ],
       nav: [
         { text: 'Home', link: '/' },
+        { text: 'Code - Github', link: 'https://github.com/dragondiver/anagram'},
         { text: 'Way to solution', link: '/exploration/' }
       ]
     }

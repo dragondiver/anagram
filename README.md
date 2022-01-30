@@ -1,44 +1,46 @@
-<p align="center">
-  <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
-</p>
-
-<h3 align="center">Project Title</h3>
+# Anagram Detection
 
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+[![GitHub Issues](https://img.shields.io/github/issues/dragondiver/anagram.svg)](https://github.com/dragondiver/anagram/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/dragondiver/anagram.svg)](https://github.com/dragondiver/anagram/pulls)
+[![License](https://img.shields.io/badge/license-Apache%202-blue.svg)]()
 
 </div>
 
 ---
 
-<p align="center"> Few lines describing your project.
+<p align="center"> List all anagrams of words contained within a file
     <br> 
 </p>
 
 ## 📝 Table of Contents
 
 - [About](#about)
+- [Github Pages](#github_pages)
 - [Getting Started](#getting_started)
 - [Deployment](#deployment)
 - [Usage](#usage)
 - [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgement)
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+Two words are defined as anagrams if they do share the same letters, but are in a different order (i.e. the English words race and care are anagrams).<br>
+Given an input file which contains one word per line, as an output construct a list of all anagrams from that input file. Print those words to the console, where all words that are an anagram should each other should be on the same line.
+
+**For ease of coding i reduced the language of words to english**
+
+## Further Readings <a name = "github_pages"></a>
+
+More Details on exploration, decision and implementation:
+[Github](https://dragondiver.github.io/anagram/) - Github Pages
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
 ### Prerequisites
 

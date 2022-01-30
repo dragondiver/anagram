@@ -1,10 +1,14 @@
-package com.fhuber.schwarz;
+package com.fhuber.schwarz.hashkey;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+
+import com.fhuber.schwarz.LogUtil;
 
 /**
  * This class is based on a piece of code i found in stackoverflow.
@@ -12,12 +16,12 @@ import java.util.stream.IntStream;
  * 
  * @author Florian Huber
  */
-class HashUtility {
-    private int n;
+public class HashUtility {
     private Map<Character, Integer> primeMap;
 
-    public HashUtility(int n) {
-        this.n = n;
+    private Logger logger = LogUtil.getLogger(HashUtility.class);
+
+    public HashUtility() {
         this.primeMap = new HashMap<>();
         constructPrimeMap();
     }
@@ -45,15 +49,15 @@ class HashUtility {
      * Maps all first {@code n} primes to the letters of the given language.
      */
     private void constructPrimeMap() {
+        String validLetters = "abcdefghijklmnopqrstuvwxyzöäüß-.";
         List<Integer> primes = IntStream.range(2, Integer.MAX_VALUE)
                 .filter(this::isPrime)
-                .limit(this.n) // Limit the number of primes here
+                .limit(validLetters.length()) // Limit the number of primes here
                 .boxed()
                 .collect(Collectors.toList());
-
         int curAlphabet = 0;
         for (int i : primes) {
-            this.primeMap.put((char) ('a' + curAlphabet++), i);
+            this.primeMap.put((char) validLetters.charAt(curAlphabet++) , i);
         }
     }
 
@@ -73,12 +77,13 @@ class HashUtility {
             long primeProduct = 1;
             long mod = 100000007;
             for (char currentCharacter : word.toCharArray()) {
-                primeProduct *= this.primeMap.get(currentCharacter) % mod;
+                Integer prime = this.primeMap.get(currentCharacter);
+                primeProduct *= prime % mod;
             }
 
             return Long.toString(primeProduct);
         } catch (Exception e) {
-            System.out.println("Error in word: " + word);
+            logger.log(Level.SEVERE, () -> "Error in word: " + word);
             throw e;
         }
     }

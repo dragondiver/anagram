@@ -156,4 +156,9 @@ typings/
 .serverless
 
 # anagram
-testdata/
+testdata/englishwords.txt
+testdata/germanwords.txt
+testdata/manyenglishwords.txt
+testdata/manygermanwords.txt
+*.1
+*.lck
