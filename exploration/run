@@ -1,0 +1,1 @@
+java -Duser.language=en -jar target/exploration-0.0.1-SNAPSHOT.jar $@
