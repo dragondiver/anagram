@@ -21,92 +21,101 @@ actionLink: /exploration/
 
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Deployment](#deployment)
+- [Testdata](#testdata)
+- [Running Tests](#test)
 - [Usage](#usage)
+- [Troubleshooting](#trouble)
 - [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
 - [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
 
 ## 🧐 About <a name = "about"></a>
 
 Two words are defined as anagrams if they do share the same letters, but are in a different order (i.e. the English words race and care are anagrams).<br>
 Given an input file which contains one word per line, as an output construct a list of all anagrams from that input file. Print those words to the console, where all words that are an anagram should each other should be on the same line.
 
+**For ease of coding i reduced the language of words to english**
+
+## Github Pages <a name = "github_pages"></a>
+
+More Details on exploration, decision and implementation:
+[Github](https://dragondiver.github.io/anagram/) - Github Pages
+
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
 ### Prerequisites
 
-What things you need to install the software and how to install them.
+This project is based on:
+- jdk17
+- git
+- Apache Maven 3.8.4
 
-```
-Give examples
+
+To get the code please clone from Github: https://github.com/dragondiver/anagram.git
+
+```sh
+git clone https://github.com/dragondiver/anagram.git
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running.
+Change into folder *anagram* and build using maven
 
-Say what the step will be
-
-```
-Give the example
+```sh
+mvn clean package
 ```
 
-And repeat
+## 🔧 Setting up testdata
 
-```
-until finished
-```
+Change into folder testdata. There is a file called setup.sh, ensure that you can execute it. This file uses the english dictionary, that is build into macos. 
 
-End with an example of getting some data out of the system or using it for a little demo.
+If you are running another OS please check, if you can find this file somewhere in the internet and dowonload it. Adjust setup.sh afterwards.
+
+After you executed setup.sh you should find 3 files in folder testdata:
+
+```zsh
+./setup.sh
+rm: englishwords.txt: No such file or directory
+rm: manyenglishwords.txt: No such file or directory
+rm: awholelotofenglishwords.txt: No such file or directory
+  235886 englishwords.txt
+ 11794300 manyenglishwords.txt
+       7 sample.txt
+       4 setup.sh
+ 12030197 total
+ ```
+
+| Name | Wordcount |
+| :--- | ---: |
+| sample.txt | 7 |
+| englishwords.txt | 235886 |
+| manyenglishwords.txt | 11794300 |
 
 ## 🔧 Running the tests <a name = "tests"></a>
 
-Explain how to run the automated tests for this system.
+- open [Issue](https://github.com/dragondiver/anagram/issues/1)
+- open [Issue](https://github.com/dragondiver/anagram/issues/3)
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## 🎈 Usage <a name="usage"></a>
 
-Add notes about how to use the system.
+Run Anagram with a testdatafile from anagram project root folder:
 
-## 🚀 Deployment <a name = "deployment"></a>
+```sh
+./scripts/runSolution.sh testdata/englishwords.txt
+```
 
-Add additional notes about how to deploy this on a live system.
+## :beetle: Troubleshooting <a name="trouble"></a>
+
+You can check the logfiles in ./logs
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+- [Weld SE](https://docs.jboss.org/weld/reference/latest/en-US/html/environments.html#weld-se) - CDI Implementation for Java SE
+- [VueJs](https://vuejs.org/) - Web Framework for Documentation
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+- [@FlorianHUber](https://github.com/dragondiver) 
 
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
-
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- References

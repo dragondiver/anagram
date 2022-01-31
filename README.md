@@ -20,8 +20,10 @@
 - [About](#about)
 - [Github Pages](#github_pages)
 - [Getting Started](#getting_started)
-- [Deployment](#deployment)
+- [Testdata](#testdata)
+- [Running Tests](#test)
 - [Usage](#usage)
+- [Troubleshooting](#trouble)
 - [Built Using](#built_using)
 - [Authors](#authors)
 
@@ -43,53 +45,69 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them.
+This project is based on:
+- jdk17
+- git
+- Apache Maven 3.8.4
 
-```
-Give examples
+
+To get the code please clone from Github: https://github.com/dragondiver/anagram.git
+
+```sh
+git clone https://github.com/dragondiver/anagram.git
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running.
+Change into folder *anagram* and build using maven
 
-Say what the step will be
-
-```
-Give the example
+```sh
+mvn clean package
 ```
 
-And repeat
+## 🔧 Setting up testdata
 
-```
-until finished
-```
+CChange into folder testdata. There is a file called setup.sh, ensure that you can execute it. This file uses the english dictionary, that is build into macos. 
 
-End with an example of getting some data out of the system or using it for a little demo.
+If you are running another OS please check, if you can find this file somewhere in the internet and dowonload it. Adjust setup.sh afterwards.
+
+After you executed setup.sh you should find 3 files in folder testdata:
+
+```zsh
+./setup.sh
+rm: englishwords.txt: No such file or directory
+rm: manyenglishwords.txt: No such file or directory
+rm: awholelotofenglishwords.txt: No such file or directory
+  235886 englishwords.txt
+ 11794300 manyenglishwords.txt
+       7 sample.txt
+       4 setup.sh
+ 12030197 total
+ ```
+
+| Name | Wordcount |
+| :--- | ---: |
+| sample.txt | 7 |
+| englishwords.txt | 235886 |
+| manyenglishwords.txt | 11794300 |
 
 ## 🔧 Running the tests <a name = "tests"></a>
 
-Explain how to run the automated tests for this system.
+- open [Issue](https://github.com/dragondiver/anagram/issues/1)
+- open [Issue](https://github.com/dragondiver/anagram/issues/3)
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## 🎈 Usage <a name="usage"></a>
 
-Add notes about how to use the system.
+Run Anagram with a testdatafile from anagram project root folder:
+
+```sh
+./scripts/runSolution.sh testdata/englishwords.txt
+```
+
+## :beetle: Troubleshooting <a name="trouble"></a>
+
+You can check the logfiles in ./logs
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
