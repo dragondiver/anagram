@@ -24,7 +24,6 @@
 - [Usage](#usage)
 - [Built Using](#built_using)
 - [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
 
 ## 🧐 About <a name = "about"></a>
 
@@ -33,7 +32,7 @@ Given an input file which contains one word per line, as an output construct a l
 
 **For ease of coding i reduced the language of words to english**
 
-## Further Readings <a name = "github_pages"></a>
+## Github Pages <a name = "github_pages"></a>
 
 More Details on exploration, decision and implementation:
 [Github](https://dragondiver.github.io/anagram/) - Github Pages
@@ -92,25 +91,12 @@ Give an example
 
 Add notes about how to use the system.
 
-## 🚀 Deployment <a name = "deployment"></a>
-
-Add additional notes about how to deploy this on a live system.
-
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+- [Weld SE](https://docs.jboss.org/weld/reference/latest/en-US/html/environments.html#weld-se) - CDI Implementation for Java SE
+- [VueJs](https://vuejs.org/) - Web Framework for Documentation
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+- [@FlorianHUber](https://github.com/dragondiver) 
 
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
-
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- References

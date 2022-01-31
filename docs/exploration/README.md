@@ -55,7 +55,7 @@ This code was not examined for performance to reduce the problem.
 In the **exploration** module in the package *com.fhuber.schwarz.hashkey** i compare generating with sorted char array against *prime_mod*.
 You can run it from root folder with ./scripts/runhash.sh. In Folder results you can find the results.
 ```bash
-./scripts/runhash.sh >/dev/null
+./scripts/runHash.sh >/dev/null
 ```
 
 | Method | Time | Number of Words |
@@ -68,3 +68,14 @@ You can run it from root folder with ./scripts/runhash.sh. In Folder results you
 I will choose the method **HashKeyFromSort** in implementation
 
 ## Testing the perfomance of the Map
+
+In the **exploration** module in the package *com.fhuber.schwarz.map** i test the performance against HashMap and ConcurrentHashMap
+You can run it from root folder with ./scripts/runMap.sh. In Folder results you can find the results.
+```bash
+./scripts/runMap.sh >/dev/null
+```
+HashMap is not threadsafe, so it cannot execute in parallel. But as reading from File should not easily be parallelized it will do.
+Still the performance of ConcurrentHashMap is comparable, so we might just stick with it as well.
+Using an in Memory HashMap stops loading at 57000000 words. So this is the place, where we should start working with a DB.
+
+

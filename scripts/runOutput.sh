@@ -14,14 +14,14 @@ function _out() {
 }
 mvn clean install
 _out "WriteToBufferedWriter"
-./scripts/run.sh com.fhuber.schwarz.output.WriteToBufferedWriter testdata/englishwords.txt
+./scripts/run.sh com.fhuber.schwarz.exploration.output.WriteToBufferedWriter testdata/englishwords.txt
 _out "WriteToBufferedWriter"
-./scripts/run.sh com.fhuber.schwarz.output.WriteToBufferedWriter testdata/manyenglishwords.txt
+./scripts/run.sh com.fhuber.schwarz.exploration.output.WriteToBufferedWriter testdata/manyenglishwords.txt
 _out "WriteToFileWriter"
-./scripts/run.sh com.fhuber.schwarz.output.WriteToFileWriter testdata/englishwords.txt
+./scripts/run.sh com.fhuber.schwarz.exploration.output.WriteToFileWriter testdata/englishwords.txt
 _out "WriteToFileWriter"
-./scripts/run.sh com.fhuber.schwarz.output.WriteToFileWriter testdata/manyenglishwords.txt
+./scripts/run.sh com.fhuber.schwarz.exploration.output.WriteToFileWriter testdata/manyenglishwords.txt
 _out "WriteToSystemOut"
-./scripts/run.sh com.fhuber.schwarz.output.WriteToSystemOut testdata/englishwords.txt
+./scripts/run.sh com.fhuber.schwarz.exploration.output.WriteToSystemOut testdata/englishwords.txt
 _out "WriteToSystemOut"
-./scripts/run.sh com.fhuber.schwarz.output.WriteToSystemOut testdata/manyenglishwords.txt
+./scripts/run.sh com.fhuber.schwarz.exploration.output.WriteToSystemOut testdata/manyenglishwords.txt

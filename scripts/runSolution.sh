@@ -12,7 +12,7 @@ function _out() {
 function run() {
     cd ${root_folder}
     # _out "start"
-    java -Duser.language=en -cp exploration/target/exploration-0.0.1-SNAPSHOT.jar $@
+    java -Duser.language=en -Djava.util.logging.config.file=${root_folder}/logs/logging.properties -jar solution/target/Anagram/Anagram.jar  $@
     # _out "finished"
 }
 
