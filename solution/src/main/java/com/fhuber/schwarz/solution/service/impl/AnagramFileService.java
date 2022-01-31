@@ -9,9 +9,9 @@ import java.util.logging.Logger;
 
 import com.fhuber.schwarz.solution.events.AnagramOutputEvent;
 import com.fhuber.schwarz.solution.exception.AnagramException;
-import com.fhuber.schwarz.solution.model.Anagram;
+import com.fhuber.schwarz.solution.model.Word;
 import com.fhuber.schwarz.solution.service.AnagramService;
-import com.fhuber.schwarz.solution.service.AnagramStorageService;
+import com.fhuber.schwarz.solution.service.AnagramStorage;
 
 import jakarta.enterprise.inject.spi.BeanManager;
 import jakarta.inject.Inject;
@@ -21,7 +21,7 @@ public class AnagramFileService implements AnagramService {
     private static Logger logger = Logger.getLogger(AnagramFileService.class.getName());
 
     @Inject
-    AnagramStorageService storage;
+    AnagramStorage storage;
 
     @Inject
     BeanManager beanManager;
@@ -33,7 +33,7 @@ public class AnagramFileService implements AnagramService {
             {
                 // yes it's a file
                 addLines(file);
-                beanManager.fireEvent(new AnagramOutputEvent(storage));
+                beanManager.fireEvent(new AnagramOutputEvent(storage.getAnagramMap()));
             }
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Stopped because of ", e);
@@ -46,7 +46,7 @@ public class AnagramFileService implements AnagramService {
         try (BufferedReader reader = Files.newBufferedReader(file.toPath())) {
             String line;
             while ((line = reader.readLine()) != null) {
-                Anagram anagram = new Anagram(line);
+                Word anagram = new Word(line);
                 storage.save(anagram);
             }
         } catch (Exception e) {
