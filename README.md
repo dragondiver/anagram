@@ -27,6 +27,11 @@
 - [Built Using](#built_using)
 - [Authors](#authors)
 
+## Additional Documentation
+
+- [More about Desing - tbd](https://dragondiver.github.io/anagram/design/)
+- [More about research](https://dragondiver.github.io/anagram/exploration/)
+
 ## 🧐 About <a name = "about"></a>
 
 Two words are defined as anagrams if they do share the same letters, but are in a different order (i.e. the English words race and care are anagrams).<br>
