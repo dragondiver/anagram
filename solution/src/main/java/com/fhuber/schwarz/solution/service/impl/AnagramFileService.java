@@ -16,6 +16,12 @@ import com.fhuber.schwarz.solution.service.AnagramStorage;
 import jakarta.enterprise.inject.spi.BeanManager;
 import jakarta.inject.Inject;
 
+/**
+ * Implementation of the AnagramService that processes files
+ * other Implementations might read from DB
+ * 
+ * @author Florian Huber
+ */
 public class AnagramFileService implements AnagramService {
 
     private static Logger logger = Logger.getLogger(AnagramFileService.class.getName());
@@ -26,6 +32,11 @@ public class AnagramFileService implements AnagramService {
     @Inject
     BeanManager beanManager;
 
+    
+    /** 
+     * @param fileName
+     * @return String
+     */
     public String process(String fileName) {
         try {
             File file = new File(fileName);
@@ -42,6 +53,11 @@ public class AnagramFileService implements AnagramService {
         return "Finished";
     }
 
+    
+    /** 
+     * @param file
+     * @throws IOException
+     */
     private void addLines(File file) throws IOException {
         try (BufferedReader reader = Files.newBufferedReader(file.toPath())) {
             String line;
