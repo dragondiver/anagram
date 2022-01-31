@@ -1,54 +1,34 @@
 package com.fhuber.schwarz.solution.model;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
- * the name is not quit correct, but i cannot find any better
- * this object can create a key build out of a sorted string of the underlying "word" string
+ * These objects will carry Words (class Anagram) if there are more than one
+ * word, we have identified an anagram
+ * 
+ * 
+ * @author Florian Huber
  */
 public class Anagram {
-    private String word;
 
-    public Anagram(String word) {
-        this.word = word;
-    }
+    String key;
+    List<Word> anagrams = new ArrayList<>();
 
-    
-    
-    /** 
-     * @return String
-     */
-    public String getWord() {
-        return word;
-    }
-
-
-    
-    /** 
-     * this key is build from the word reduced to alphanumeric characters and sorted, thus all anagrams will have the same key
-     * @return String
-     */
-    public String getKey() {
-        char[] c = word.toLowerCase().replaceAll("[^\\p{IsAlphabetic}\\p{IsDigit}]", "").toCharArray();
-        Arrays.sort(c);
-        return new String(c);
-    }
-
-
-    
-    /** 
+    /**
      * @return int
      */
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((word == null) ? 0 : word.hashCode());
+        result = prime * result + ((anagrams == null) ? 0 : anagrams.hashCode());
+        result = prime * result + ((key == null) ? 0 : key.hashCode());
         return result;
     }
 
-
-    
-    /** 
+    /**
      * @param obj
      * @return boolean
      */
@@ -61,23 +41,61 @@ public class Anagram {
         if (getClass() != obj.getClass())
             return false;
         Anagram other = (Anagram) obj;
-        if (word == null) {
-            if (other.word != null)
+        if (anagrams == null) {
+            if (other.anagrams != null)
                 return false;
-        } else if (!word.equals(other.word))
+        } else if (!anagrams.equals(other.anagrams))
+            return false;
+        if (key == null) {
+            if (other.key != null)
+                return false;
+        } else if (!key.equals(other.key))
             return false;
         return true;
     }
 
+    /**
+     * get the collected words
+     * 
+     * @return List<Anagram>
+     */
+    public List<Word> getAnagrams() {
+        return anagrams;
+    }
 
-    
-    /** 
+    /**
+     * set a new list of anagrams
+     * 
+     * @param anagrams
+     */
+    public void setAnagrams(List<Word> anagrams) {
+        this.anagrams = anagrams;
+    }
+
+    /**
+     * true if we really found anagrams
+     * 
+     * @return boolean
+     */
+    public boolean hasAnagrams() {
+        return getAnagrams().size() > 1;
+    }
+
+    /**
+     * return a String, that has all anagram words separated by a space
+     * 
+     * @return String
+     */
+    public String getAnagramsAsString() {
+        return anagrams.stream().map(Word::getWord).collect(Collectors.joining(" "));
+    }
+
+    /**
      * @return String
      */
     @Override
     public String toString() {
-        return "Anagram [word=" + word + "]";
+        return "AnagramCollection [key=" + key + ", anagrams=" + anagrams + "]";
     }
-    
-    
+
 }
