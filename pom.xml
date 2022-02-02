@@ -22,6 +22,7 @@
             </activation>
             <modules>
                 <module>solution</module>
+                <module>requestresponse</module>
             </modules>
         </profile>
         <profile>
@@ -111,6 +112,12 @@
                 <artifactId>weld-se-shaded</artifactId>
                 <version>4.0.2.Final</version>
              </dependency>
+             <dependency>
+                <groupId>org.jboss.weld</groupId>
+                <artifactId>weld-junit5</artifactId>
+                <version>3.0.1-SNAPSHOT</version>
+                <scope>test</scope>
+              </dependency>
         </dependencies>
     </dependencyManagement>
 
