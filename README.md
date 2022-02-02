@@ -39,6 +39,19 @@ Given an input file which contains one word per line, as an output construct a l
 
 **For ease of coding i reduced the language of words to english**
 
+***This project contains 2 solutions now and 1 additional implementation example***
+
+I reimplemented parts of the solution found in the module solution in a new module **requestresponse**.
+
+I felt that was necessary because, during writing the tests i discovered that the initial solution was to complicated, and did not even fulfill my requirements on a good service.
+
+But as you can see, i only change the App with the main class, and the controlling service. I also had to change the interface here, so i could not use an `alternative`.
+
+I used the initial module `solution` as a dependency on the new module `requestresponse`.
+As i was using a new `weld se` implementation, the namespace was already migrated to *Jakarta*.
+
+But in the Quarkus example, i sadly had to copy all classes into the module, as quarkus does not have `Jakarta`namespace changes ready for now (or i was not apble to find it).
+
 ## Github Pages <a name = "github_pages"></a>
 
 More Details on exploration, decision and implementation:
@@ -98,9 +111,9 @@ rm: awholelotofenglishwords.txt: No such file or directory
 
 ## 🔧 Running the tests <a name = "tests"></a>
 
-- open [Issue](https://github.com/dragondiver/anagram/issues/1)
-- open [Issue](https://github.com/dragondiver/anagram/issues/3)
-
+```bash
+mvn clean verify
+```
 
 ## 🎈 Usage <a name="usage"></a>
 
