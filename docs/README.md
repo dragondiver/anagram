@@ -21,6 +21,7 @@ actionLink: /exploration/
 ## Table of Contents
 
 - [More about Design](/design/)
+- [Some discussions on the design](/discussions/)
 - [More about Usage](/usage/)
 - [More about my research](/exploration/)
 
