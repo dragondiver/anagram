@@ -5,6 +5,9 @@ import java.util.logging.Logger;
 
 import com.fhuber.schwarz.solution.events.AnagramStartEvent;
 
+import org.jboss.weld.context.RequestContext;
+import org.jboss.weld.context.unbound.UnboundLiteral;
+
 import jakarta.enterprise.inject.se.SeContainer;
 import jakarta.enterprise.inject.se.SeContainerInitializer;
 
@@ -39,6 +42,8 @@ public class AnagramApp {
         // maven)
         SeContainerInitializer containerInitializer = SeContainerInitializer.newInstance();
         try (SeContainer container = containerInitializer.initialize()) {
+            RequestContext requestContext = container.select(RequestContext.class, UnboundLiteral.INSTANCE).get();
+            requestContext.activate();
             container.getBeanManager().fireEvent(new AnagramStartEvent(fileName));
         }
 

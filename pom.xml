@@ -23,6 +23,7 @@
             <modules>
                 <module>solution</module>
                 <module>requestresponse</module>
+                <module>quarkus</module>
             </modules>
         </profile>
         <profile>

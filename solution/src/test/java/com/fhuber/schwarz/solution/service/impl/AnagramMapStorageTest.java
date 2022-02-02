@@ -10,6 +10,8 @@ import com.fhuber.schwarz.solution.observers.AnagramOutputEventObserver;
 import com.fhuber.schwarz.solution.service.AnagramService;
 import com.fhuber.schwarz.solution.service.AnagramStorage;
 
+import org.jboss.weld.context.RequestContext;
+import org.jboss.weld.context.unbound.UnboundLiteral;
 import org.jboss.weld.junit5.WeldInitiator;
 import org.jboss.weld.junit5.WeldSetup;
 import org.jboss.weld.junit5.auto.EnableAutoWeld;
@@ -32,6 +34,8 @@ public class AnagramMapStorageTest {
 
     @Test
     public void shouldSave() {
+        RequestContext requestContext = weld.select(RequestContext.class, UnboundLiteral.INSTANCE).get();
+            requestContext.activate();
         Word word = new Word("cat");
         storage.save(word);
         assertEquals("cat",storage.getAnagramMap().getAnaMap().get("act").getAnagramsAsString());

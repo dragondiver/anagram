@@ -17,6 +17,8 @@ import com.fhuber.schwarz.solution.service.AnagramService;
 import com.fhuber.schwarz.solution.service.impl.AnagramFileService;
 import com.fhuber.schwarz.solution.service.impl.AnagramMapStorage;
 
+import org.jboss.weld.context.RequestContext;
+import org.jboss.weld.context.unbound.UnboundLiteral;
 import org.jboss.weld.junit5.WeldInitiator;
 import org.jboss.weld.junit5.WeldSetup;
 import org.jboss.weld.junit5.auto.EnableAlternatives;
@@ -121,7 +123,8 @@ public class AppTest {
     public void shouldWork() {
         URL url = this.getClass().getResource("sample.txt");
         String path = url.getPath();
-        String[] args = { path };
+        RequestContext requestContext = weld.select(RequestContext.class, UnboundLiteral.INSTANCE).get();
+            requestContext.activate();
         assertDoesNotThrow(() -> {
             weld.event().select(AnagramStartEvent.class).fire(new AnagramStartEvent(path));
         });

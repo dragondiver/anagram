@@ -9,13 +9,12 @@ import java.util.logging.Logger;
 import java.util.stream.Stream;
 
 import com.fhuber.schwarz.alternate.service.Anagram2Service;
-import com.fhuber.schwarz.solution.events.AnagramOutputEvent;
 import com.fhuber.schwarz.solution.exception.AnagramException;
 import com.fhuber.schwarz.solution.model.Anagram;
 import com.fhuber.schwarz.solution.model.Word;
 import com.fhuber.schwarz.solution.service.AnagramStorage;
 
-import jakarta.enterprise.inject.spi.BeanManager;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 
 /**
@@ -24,15 +23,13 @@ import jakarta.inject.Inject;
  * 
  * @author Florian Huber
  */
+@RequestScoped
 public class Anagram2FileService implements Anagram2Service {
 
     private static Logger logger = Logger.getLogger(Anagram2FileService.class.getName());
 
     @Inject
     AnagramStorage storage;
-
-    @Inject
-    BeanManager beanManager;
 
     /**
      * @param fileName
