@@ -24,10 +24,11 @@ public class AnagramResource {
     @Produces(MediaType.SERVER_SENT_EVENTS)
     @RestSseElementType(MediaType.TEXT_PLAIN)
     @Path("/{filename}")
-    public Multi<Anagram> anagramsAsStream(String filename) {
+    public Multi<Object> anagramsAsStream(String filename) {
         URL url = AnagramResource.class.getClassLoader().getResource("sample.txt");
         String path = url.getPath();
-        return Multi.createFrom().items(service.process(path));
+        return Multi.createFrom().items(
+                service.process(path).map(value -> value.getAnagramsAsString()));
     }
 
 }

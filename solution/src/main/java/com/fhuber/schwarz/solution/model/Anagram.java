@@ -13,7 +13,6 @@ import java.util.stream.Collectors;
  */
 public class Anagram {
 
-    String key;
     List<Word> anagrams = new ArrayList<>();
 
     /**
@@ -46,11 +45,7 @@ public class Anagram {
                 return false;
         } else if (!anagrams.equals(other.anagrams))
             return false;
-        if (key == null) {
-            if (other.key != null)
-                return false;
-        } else if (!key.equals(other.key))
-            return false;
+        
         return true;
     }
 
@@ -95,7 +90,7 @@ public class Anagram {
      */
     @Override
     public String toString() {
-        return "AnagramCollection [key=" + key + ", anagrams=" + anagrams + "]";
+        return "AnagramCollection [anagrams=" + anagrams + "]";
     }
 
 }
