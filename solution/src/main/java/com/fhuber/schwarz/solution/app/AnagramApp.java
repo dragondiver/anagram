@@ -26,9 +26,9 @@ public class AnagramApp {
     public static void main(String[] args) {
 
         // check if there is an argument
-        if (args.length == 0) {
-            logger.log(Level.SEVERE, "Proper Usage is: java program filename");
-            System.exit(0);
+        if (args.length == 0 || args[0].length() <= 0) {
+            System.err.println("Proper Usage is: java program filename");
+            System.exit(1);
         }
         // use argument 1 as filename
         String fileName = args[0];

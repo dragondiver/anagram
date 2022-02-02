@@ -32,8 +32,7 @@ public class AnagramFileService implements AnagramService {
     @Inject
     BeanManager beanManager;
 
-    
-    /** 
+    /**
      * @param fileName
      * @return String
      */
@@ -45,6 +44,8 @@ public class AnagramFileService implements AnagramService {
                 // yes it's a file
                 addLines(file);
                 beanManager.fireEvent(new AnagramOutputEvent(storage.getAnagramMap()));
+            } else {
+                throw new AnagramException("File not found", null);
             }
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Stopped because of ", e);
@@ -53,8 +54,7 @@ public class AnagramFileService implements AnagramService {
         return "Finished";
     }
 
-    
-    /** 
+    /**
      * @param file
      * @throws IOException
      */
