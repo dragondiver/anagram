@@ -30,5 +30,6 @@ I copied the source form module solution and request response to the quarkus mod
 
 The Quarkus module uses resteasy-reactive. The advantage is, that i can return the anagrams, while reading them from the stream.
 Thats just for fun ;-), but impressive.
+I did not add json to the response processing
 
 
