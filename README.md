@@ -32,7 +32,7 @@
 - [More about Design - tbd](https://dragondiver.github.io/anagram/design/)
 - [More about research](https://dragondiver.github.io/anagram/exploration/)
 
-## 🧐 About <a name = "about"></a>
+## About <a name = "about"></a>
 
 Two words are defined as anagrams if they do share the same letters, but are in a different order (i.e. the English words race and care are anagrams).<br>
 Given an input file which contains one word per line, as an output construct a list of all anagrams from that input file. Print those words to the console, where all words that are an anagram should each other should be on the same line.

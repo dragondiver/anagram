@@ -1,5 +1,4 @@
 ---
-home: true
 sidebar: auto
 heroText: Anagram Detection
 tagline: List all anagrams of words contained within a file
@@ -17,7 +16,7 @@ actionLink: /exploration/
 
 ---
 
-## 📝 Table of Contents
+## Table of Contents
 
 - [About](#about)
 - [Getting Started](#getting_started)
@@ -30,10 +29,10 @@ actionLink: /exploration/
 
 ## Additional Documentation
 
-- [More about Design - tbd](https://dragondiver.github.io/anagram/design/)
-- [More about research](https://dragondiver.github.io/anagram/exploration/)
+- [More about Design - tbd](/design/)
+- [More about research](/exploration/)
 
-## 🧐 About <a name = "about"></a>
+## About <a name = "about"></a>
 
 Two words are defined as anagrams if they do share the same letters, but are in a different order (i.e. the English words race and care are anagrams).<br>
 Given an input file which contains one word per line, as an output construct a list of all anagrams from that input file. Print those words to the console, where all words that are an anagram should each other should be on the same line.
@@ -45,7 +44,7 @@ Given an input file which contains one word per line, as an output construct a l
 More Details on exploration, decision and implementation:
 [Github](https://dragondiver.github.io/anagram/) - Github Pages
 
-## 🏁 Getting Started <a name = "getting_started"></a>
+## Getting Started <a name = "getting_started"></a>
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
@@ -71,7 +70,7 @@ Change into folder *anagram* and build using maven
 mvn clean package
 ```
 
-## 🔧 Setting up testdata
+## Setting up testdata
 
 Change into folder testdata. There is a file called setup.sh, ensure that you can execute it. This file uses the english dictionary, that is build into macos. 
 
@@ -97,13 +96,13 @@ rm: awholelotofenglishwords.txt: No such file or directory
 | englishwords.txt | 235886 |
 | manyenglishwords.txt | 11794300 |
 
-## 🔧 Running the tests <a name = "tests"></a>
+## Running the tests <a name = "tests"></a>
 
 - open [Issue](https://github.com/dragondiver/anagram/issues/1)
 - open [Issue](https://github.com/dragondiver/anagram/issues/3)
 
 
-## 🎈 Usage <a name="usage"></a>
+## Usage <a name="usage"></a>
 
 Run Anagram with a testdatafile from anagram project root folder:
 
@@ -115,12 +114,12 @@ Run Anagram with a testdatafile from anagram project root folder:
 
 You can check the logfiles in ./logs
 
-## ⛏️ Built Using <a name = "built_using"></a>
+## Built Using <a name = "built_using"></a>
 
 - [Weld SE](https://docs.jboss.org/weld/reference/latest/en-US/html/environments.html#weld-se) - CDI Implementation for Java SE
 - [VueJs](https://vuejs.org/) - Web Framework for Documentation
 
-## ✍️ Authors <a name = "authors"></a>
+## Authors <a name = "authors"></a>
 
 - [@FlorianHUber](https://github.com/dragondiver) 
 

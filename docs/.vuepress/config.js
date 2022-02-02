@@ -3,15 +3,17 @@ module.exports = {
     description: 'List all anagrams of words contained within a file',
     base: "/anagram/",
     themeConfig: {
-        // displayAllHeaders: true,
+      displayAllHeaders: true,
       sidebar: [
         '/',
+        '/design/',
         '/exploration/'
       ],
       nav: [
         { text: 'Home', link: '/' },
+        { text: 'Design considerations', link: '/design/'},
         { text: 'Code - Github', link: 'https://github.com/dragondiver/anagram'},
-        { text: 'Way to solution', link: '/exploration/' }
+        { text: 'Explorations', link: '/exploration/' }
       ]
     }
   }
