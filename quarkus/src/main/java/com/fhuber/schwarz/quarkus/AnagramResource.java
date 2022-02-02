@@ -9,7 +9,6 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import com.fhuber.schwarz.alternate.service.Anagram2Service;
-import com.fhuber.schwarz.solution.model.Anagram;
 
 import org.jboss.resteasy.reactive.RestSseElementType;
 

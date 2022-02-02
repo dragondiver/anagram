@@ -23,7 +23,6 @@ public class Anagram {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((anagrams == null) ? 0 : anagrams.hashCode());
-        result = prime * result + ((key == null) ? 0 : key.hashCode());
         return result;
     }
 
