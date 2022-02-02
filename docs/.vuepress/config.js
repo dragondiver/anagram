@@ -7,12 +7,14 @@ module.exports = {
       sidebar: [
         '/',
         '/design/',
+        '/discussions/',
         '/usage/',
         '/exploration/'
       ],
       nav: [
         { text: 'Home', link: '/' },
         { text: 'Design considerations', link: '/design/'},
+        { text: 'Discussion', link: '/discussions/'},
         { text: 'Usage', link: '/usage/'},
         { text: 'Explorations', link: '/exploration/' },
         { text: 'Code - Github', link: 'https://github.com/dragondiver/anagram'}

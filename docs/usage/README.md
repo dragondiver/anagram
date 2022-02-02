@@ -95,13 +95,13 @@ For testing i recommend [httpie](https://httpie.io)
 
 You can install it, for example with brew on macos
 
-```zsh
+```bash
 brew install httpie
 ```
 
 Send a GET Message with the filename as Path Parameter
 
-```zsh
+```bash
 http GET localhost:8080/anagram/sample.txt
 ```
 
