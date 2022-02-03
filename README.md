@@ -29,8 +29,10 @@
 
 ## Additional Documentation
 
-- [More about Design - tbd](https://dragondiver.github.io/anagram/design/)
-- [More about research](https://dragondiver.github.io/anagram/exploration/)
+- [More about Design](https://dragondiver.github.io/anagram/design/)
+- [More about Usage](https://dragondiver.github.io/anagram/usage/)
+- [Some discussions](https://dragondiver.github.io/anagram/discussions/)
+- [Some research](https://dragondiver.github.io/anagram/exploration/)
 
 ## About <a name = "about"></a>
 
